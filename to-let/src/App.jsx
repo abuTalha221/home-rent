@@ -1,11 +1,13 @@
-import React from 'react'
-import Home from './Components/Home/Home'
-import Navbar from './Components/Navbar/Navbar'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import Navbar from './Components/Navbar/Navbar';
+import Home from './Components/Home/Home';
 
 const App = () => {
-  React.useEffect(() => {
+  useEffect(() => {
     AOS.init({
       offset: 100,
       duration: 800,
@@ -13,15 +15,17 @@ const App = () => {
       delay: 100,
     });
     AOS.refresh();
-  }, [])
-  
+  }, []);
+
   return (
-    <div>
-      <Navbar/>
-      <Home/>
-    </div>
-  )
-}
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* You can add more routes here like About, Contact etc. */}
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
-
+export default App;
