@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Navbar from './Components/Navbar/Navbar';
-import Home from './Components/Home/Home';
+import Home from './Components/Homepage/Home';
 
 const App = () => {
   useEffect(() => {

@@ -5,6 +5,8 @@ import Image3 from '../../assets/homep/Home3.png';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SearchProperty from '../SearchProperty/SearchProperty';
+import Properties from '../Properties/Properties';
 
 const ImageList = [
   {
@@ -45,7 +47,8 @@ const Home = () => {
   };
 
   return (
-    <div className="w-full min-h-[80vh] bg-gray-50 flex items-center">
+    <div>
+      <div className="w-full min-h-[80vh] bg-gray-100 flex items-center">
       <div className="container mx-auto p-6 sm:p-12">
         <Slider {...settings}>
           {ImageList.map((data) => (
@@ -74,7 +77,7 @@ const Home = () => {
                     data-aos-duration="500"
                     data-aos-delay="300"
                   >
-                    <button className="bg-gradient-to-r from-[#EC733B] to-[#d7615b] hover:scale-105 duration-300 text-white py-2 px-6 rounded-full cursor-pointer">
+                    <button className="bg-gradient-to-r from-[#EC733B] to-[#e45716] hover:scale-105 duration-300 text-white py-2 px-6 rounded-full cursor-pointer">
                       Book Now
                     </button>
                   </div>
@@ -100,6 +103,10 @@ const Home = () => {
         </Slider>
       </div>
     </div>
+    <SearchProperty />
+    <Properties />
+    </div>
+    
   );
 };
 
