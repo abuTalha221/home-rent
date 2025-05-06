@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SearchProperty from '../SearchProperty/SearchProperty';
 import Properties from '../Properties/Properties';
+import Categories from '../Categories/Categories';
 
 const ImageList = [
   {
@@ -105,6 +106,7 @@ const Home = () => {
     </div>
     <SearchProperty />
     <Properties />
+    <Categories />
     </div>
     
   );

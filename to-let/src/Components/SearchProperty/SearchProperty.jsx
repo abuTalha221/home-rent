@@ -94,7 +94,7 @@ const SearchProperty = () => {
             {/* Find Button */}
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded px-6 py-2 transition"
+              className="bg-[#EC733B] hover:bg-[#e45716] text-white font-semibold rounded px-6 py-2 transition cursor-pointer "
             >
               Find
             </button>
