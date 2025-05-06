@@ -2,9 +2,8 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
-import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Homepage/Home';
+import About from './Components/About';
 
 const App = () => {
   useEffect(() => {
@@ -19,10 +18,9 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* You can add more routes here like About, Contact etc. */}
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
