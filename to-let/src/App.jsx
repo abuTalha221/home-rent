@@ -4,6 +4,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Home from './Components/Homepage/Home';
 import About from './Components/About';
+import Services from './Components/Services';
+import Layout from './Components/Layout';
+import Pricing from './Components/Pricing';
+import Contact from './Components/Contact';
+import Registration from './Components/Registration/Registration';
 
 const App = () => {
   useEffect(() => {
@@ -18,10 +23,16 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
+      <Layout> 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Registration />} />
+        </Routes>
+      </Layout>
     </BrowserRouter>
   );
 };

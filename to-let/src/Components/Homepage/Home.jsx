@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick-theme.css";
 import SearchProperty from "../SearchProperty/SearchProperty";
 import Properties from "../Properties/Properties";
 import Categories from "../Categories/Categories";
-import Footer from "../Footer";
 import Navbar from "../Navbar/Navbar";
 
 const ImageList = [
@@ -113,7 +112,6 @@ const Home = () => {
       </section>
       <Properties />
       <Categories />
-      <Footer />
     </div>
   );
 };

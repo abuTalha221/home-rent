@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import Logo from "../../assets/logo.png";
 import { FaCaretDown, FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 const menu = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About", link: "/about" },
-  { id: 3, name: "Services", link: "/#" },
-  { id: 4, name: "Pricing", link: "/#" },
-  { id: 5, name: "Contact Us", link: "/#" },
+  { id: 3, name: "Services", link: "/services" },
+  { id: 4, name: "Pricing", link: "/pricing" },
+  { id: 5, name: "Contact Us", link: "/contact" },
 ];
 
 const DropdownLinks = [
@@ -23,6 +24,7 @@ const DropdownLinks = [
 ];
 
 const Navbar = () => {
+  const navigate=useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -74,7 +76,7 @@ const Navbar = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex gap-3 items-center">
-          <button className="text-[#EC733B] px-6 py-2 border-2 border-[#EC733B] rounded-lg hover:bg-[#EC733B] hover:text-white transition duration-200 ease-in-out cursor-pointer">
+          <button onClick={()=>navigate("/register")} className="text-[#EC733B] px-6 py-2 border-2 border-[#EC733B] rounded-lg hover:bg-[#EC733B] hover:text-white transition duration-200 ease-in-out cursor-pointer">
             Login/Register
           </button>
           <button className="text-white bg-[#EC733B] px-6 py-2 border-2 border-[#EC733B] rounded-lg transform transition duration-300 ease-in-out hover:translate-x-2 cursor-pointer">
