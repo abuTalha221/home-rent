@@ -31,12 +31,13 @@ const Navbar = () => {
     <div className="shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 fixed top-0 left-0 w-full z-50">
       <div className="relative mx-auto flex justify-between items-center py-0 px-4 md:px-20 lg:px-32">
         {/* Logo */}
+        <a href="/">
         <img
           src={Logo}
           alt="Logo"
           className="w-[80px] h-[80px] object-contain"
         />
-
+        </a>
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6 py-2">
           {menu.map((data) => (
