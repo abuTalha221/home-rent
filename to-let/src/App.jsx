@@ -10,6 +10,7 @@ import Pricing from './Components/Pricing';
 import Contact from './Components/Contact';
 import Registration from './Components/Registration/Registration';
 import Login from './Components/Registration/Login';
+import FindHouse from './Components/FindHouse';
 
 const App = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/find-house" element={<FindHouse />} />
         </Routes>
       </Layout>
     </BrowserRouter>

@@ -20,7 +20,7 @@ const districtData = {
   CoxsBazar: ["Laboni Beach", "Sugandha Point", "Kolatoli Beach"],
 };
 
-const SearchProperty = () => {
+const SearchProperty = ({ onSearch }) => {
   const [selectedDistrict, setSelectedDistrict] = useState('');
   const [selectedArea, setSelectedArea] = useState('');
   const [areaList, setAreaList] = useState([]);
@@ -32,8 +32,15 @@ const SearchProperty = () => {
     setAreaList(districtData[district] || []);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (selectedDistrict && selectedArea) {
+      onSearch(selectedDistrict, selectedArea);
+    }
+  };
+
   return (
-    <div className="w-ful lpy-12 mt-10">
+    <div className="w-full py-12 mt-10">
       <div className="container mx-auto px-4">
         
         {/* Heading */}
@@ -48,7 +55,7 @@ const SearchProperty = () => {
 
         {/* Search Form */}
         <div className="bg-white shadow-lg rounded-lg p-6">
-          <form className="flex flex-col md:flex-row gap-4">
+          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4">
 
             {/* District Dropdown */}
             <select
