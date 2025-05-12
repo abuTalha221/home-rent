@@ -1,12 +1,13 @@
-import React from "react";
-import Navbar from "./Navbar/Navbar";  
-import Footer from "./Footer";         
+// Layout.jsx
+import { Outlet } from 'react-router-dom';
+import Navbar from './Navbar/Navbar';
+import Footer from './Footer';
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <>
-      <Navbar />
-      <main>{children}</main>
+      <Navbar/>
+      <Outlet />
       <Footer />
     </>
   );

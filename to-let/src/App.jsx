@@ -2,15 +2,22 @@ import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+// Import Pages
 import Home from './Components/Homepage/Home';
 import About from './Components/About';
 import Services from './Components/Services';
 import Layout from './Components/Layout';
-import Pricing from './Components/Pricing';
+import AddProperty from './Components/AddProperty';
 import Contact from './Components/Contact';
 import Registration from './Components/Registration/Registration';
 import Login from './Components/Registration/Login';
 import FindHouse from './Components/FindHouse';
+
+// Admin Imports
+import AdminLayout from "./Admin/Layout/AdminLayout";
+import AdminDashboard from "./Admin/Pages/AdminDashboard";
+import ManageProperties from "./Admin/Pages/ManageProperties";
 
 const App = () => {
   useEffect(() => {
@@ -25,18 +32,25 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Layout> 
-        <Routes>
+      <Routes>
+        {/* User Side Layout */}
+        <Route element={<Layout/>}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/addproperty" element={<AddProperty />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/login" element={<Login />} />
           <Route path="/find-house" element={<FindHouse />} />
-        </Routes>
-      </Layout>
+        </Route>
+
+        {/* Admin Side Layout */}
+        <Route element={<AdminLayout/>}>
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/manage-properties" element={<ManageProperties/>} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 };

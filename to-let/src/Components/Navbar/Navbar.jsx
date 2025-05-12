@@ -7,7 +7,7 @@ const menu = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "About", link: "/about" },
   { id: 3, name: "Services", link: "/services" },
-  { id: 4, name: "Pricing", link: "/pricing" },
+  { id: 4, name: "Add Property", link: "/addproperty" },
   { id: 5, name: "Contact Us", link: "/contact" },
 ];
 
@@ -24,7 +24,7 @@ const DropdownLinks = [
 ];
 
 const Navbar = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -32,11 +32,11 @@ const Navbar = () => {
       <div className="relative mx-auto flex justify-between items-center py-0 px-4 md:px-20 lg:px-32">
         {/* Logo */}
         <a href="/">
-        <img
-          src={Logo}
-          alt="Logo"
-          className="w-[80px] h-[80px] object-contain"
-        />
+          <img
+            src={Logo}
+            alt="Logo"
+            className="w-[80px] h-[80px] object-contain"
+          />
         </a>
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6 py-2">
@@ -77,10 +77,16 @@ const Navbar = () => {
 
         {/* Desktop Buttons */}
         <div className="hidden md:flex gap-3 items-center">
-          <button onClick={()=>navigate("/register")} className="text-[#EC733B] px-6 py-2 border-2 border-[#EC733B] rounded-lg hover:bg-[#EC733B] hover:text-white transition duration-200 ease-in-out cursor-pointer">
+          <button
+            onClick={() => navigate("/register")}
+            className="text-[#EC733B] px-6 py-2 border-2 border-[#EC733B] rounded-lg hover:bg-[#EC733B] hover:text-white transition duration-200 ease-in-out cursor-pointer"
+          >
             Login/Register
           </button>
-          <button className="text-white bg-[#EC733B] px-6 py-2 border-2 border-[#EC733B] rounded-lg transform transition duration-300 ease-in-out hover:translate-x-2 cursor-pointer">
+          <button
+            onClick={() => navigate("/find-house")}
+            className="text-white bg-[#EC733B] px-6 py-2 border-2 border-[#EC733B] rounded-lg transform transition duration-300 ease-in-out hover:translate-x-2 cursor-pointer"
+          >
             Find House
           </button>
         </div>
@@ -136,12 +142,15 @@ const Navbar = () => {
             <button className="text-[#EC733B] px-6 py-2 border-2 border-[#EC733B] rounded-lg hover:bg-[#EC733B] hover:text-white transition duration-200 ease-in-out">
               Login/Register
             </button>
-            <a
-              href="#search-property"
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                navigate("/find-house");
+              }}
               className="text-white bg-[#EC733B] px-6 py-2 border-2 border-[#EC733B] rounded-lg transform transition duration-300 ease-in-out hover:translate-x-2 cursor-pointer"
             >
               Find House
-            </a>
+            </button>
           </div>
         </div>
       )}
