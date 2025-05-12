@@ -18,6 +18,7 @@ import FindHouse from './Components/FindHouse';
 import AdminLayout from "./Admin/Layout/AdminLayout";
 import AdminDashboard from "./Admin/Pages/AdminDashboard";
 import ManageProperties from "./Admin/Pages/ManageProperties";
+import ManageUsers from './Admin/Pages/ManageUsers';
 
 const App = () => {
   useEffect(() => {
@@ -49,6 +50,7 @@ const App = () => {
         <Route element={<AdminLayout/>}>
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/manage-properties" element={<ManageProperties/>} />
+          <Route path="/admin/manage-users" element={<ManageUsers/>} />
         </Route>
       </Routes>
     </BrowserRouter>

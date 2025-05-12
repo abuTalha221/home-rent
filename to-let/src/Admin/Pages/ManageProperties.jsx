@@ -1,28 +1,42 @@
-import React from 'react';
+import React from "react";
 
 const ManageProperties = () => {
   // Dummy data for now
   const properties = [
     {
       id: 1,
-      title: 'Luxury Apartment in Gulshan',
-      location: 'Gulshan, Dhaka',
-      price: '৳ 25,000/month',
-      status: 'Available',
+      title: "Luxury Apartment in Gulshan",
+      location: "Gulshan, Dhaka",
+      price: "৳ 25,000/month",
+      status: "Available",
     },
     {
       id: 2,
-      title: 'Family House in Uttara',
-      location: 'Uttara, Dhaka',
-      price: '৳ 18,000/month',
-      status: 'Rented',
+      title: "Family House in Uttara",
+      location: "Uttara, Dhaka",
+      price: "৳ 18,000/month",
+      status: "Rented",
     },
     {
       id: 3,
-      title: 'Modern Studio in Banani',
-      location: 'Banani, Dhaka',
-      price: '৳ 12,000/month',
-      status: 'Available',
+      title: "Modern Studio in Banani",
+      location: "Banani, Dhaka",
+      price: "৳ 12,000/month",
+      status: "Available",
+    },
+    {
+      id: 4,
+      title: "Penthouse in Bashundhara",
+      location: "Bashundhara, Dhaka",
+      price: "৳ 50,000/month",
+      status: "Available",
+    },
+    {
+      id: 5,
+      title: "Small Flat in Dhanmondi",
+      location: "Dhanmondi, Dhaka",
+      price: "৳ 15,000/month",
+      status: "Rented",
     },
   ];
 
@@ -50,9 +64,9 @@ const ManageProperties = () => {
                 <td className="py-4 px-6">
                   <span
                     className={`px-3 py-1 rounded-full text-white ${
-                      property.status === 'Available'
-                        ? 'bg-green-500'
-                        : 'bg-red-500'
+                      property.status === "Available"
+                        ? "bg-green-500"
+                        : "bg-red-500"
                     }`}
                   >
                     {property.status}
