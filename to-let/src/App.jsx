@@ -4,15 +4,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // Import Pages
-import Home from './Components/Homepage/Home';
-import About from './Components/About';
-import Services from './Components/Services';
-import Layout from './Components/Layout';
-import AddProperty from './Components/AddProperty';
-import Contact from './Components/Contact';
-import Registration from './Components/Registration/Registration';
-import Login from './Components/Registration/Login';
-import FindHouse from './Components/FindHouse';
+import Home from './User/Pages/Homepage/Home';
+import About from './User/Pages/About';
+import Services from './User/Pages/Services';
+import Layout from './User/Components/Layout';
+import AddProperty from './User/Pages/AddProperty';
+import Contact from './User/Pages/Contact';
+import Registration from './User/Pages/Registration/Registration';
+import Login from './User/Pages/Registration/Login';
+import FindHouse from './User/Pages/FindHouse';
 
 // Admin Imports
 import AdminLayout from "./Admin/Layout/AdminLayout";

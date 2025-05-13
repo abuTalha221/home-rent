@@ -1,14 +1,14 @@
 import React from "react";
-import Image1 from "../../assets/homep/Home2.png";
-import Image2 from "../../assets/homep/Home1.png";
-import Image3 from "../../assets/homep/Home3.png";
+import Image1 from "../../../assets/homep/Home2.png";
+import Image2 from "../../../assets/homep/Home1.png";
+import Image3 from "../../../assets/homep/Home3.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SearchProperty from "../SearchProperty/SearchProperty";
-import Properties from "../Properties/Properties";
-import Categories from "../Categories/Categories";
-import Navbar from "../Navbar/Navbar";
+import Properties from "../Properties";
+import Categories from "../Categories";
+import Navbar from "../../Components/Navbar";
 
 const ImageList = [
   {
