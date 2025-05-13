@@ -19,6 +19,7 @@ import AdminLayout from "./Admin/Layout/AdminLayout";
 import AdminDashboard from "./Admin/Pages/AdminDashboard";
 import ManageProperties from "./Admin/Pages/ManageProperties";
 import ManageUsers from './Admin/Pages/ManageUsers';
+import Bookings from './Admin/Pages/Bookings';
 
 const App = () => {
   useEffect(() => {
@@ -51,6 +52,7 @@ const App = () => {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/manage-properties" element={<ManageProperties/>} />
           <Route path="/admin/manage-users" element={<ManageUsers/>} />
+          <Route path="/admin/bookings" element={<Bookings/>} />
         </Route>
       </Routes>
     </BrowserRouter>

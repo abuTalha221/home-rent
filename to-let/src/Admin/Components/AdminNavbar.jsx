@@ -9,7 +9,7 @@ const AdminNavbar = () => {
         <Link to="/admin" className="hover:text-blue-600">Dashboard</Link>
         <Link to="/admin/manage-properties" className="hover:text-blue-600">Properties</Link>
         <Link to="/admin/manage-users" className="hover:text-blue-600">Users</Link>
-        <Link to="/admin/manage-bookings" className="hover:text-blue-600">Bookings</Link>
+        <Link to="/admin/bookings" className="hover:text-blue-600">Bookings</Link>
       </div>
     </nav>
   );
